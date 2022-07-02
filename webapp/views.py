@@ -84,3 +84,10 @@ def edit_post(request, pk):
             return redirect('show_posts')
         else:
             return render(request, 'edit.html',{'forms': forms})
+
+def delete_post(request, pk):
+    post = get_object_or_404(Book, pk=pk)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('show_posts')
+    return render (request, 'delete.html', {'post':post})

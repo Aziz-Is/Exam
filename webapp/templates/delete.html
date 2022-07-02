@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+
+    <p> Do you wanna delete?</p>
+
+    <input type="submit" value="Yes">
+    <a href="{% url 'show_posts'%}">
+        <button type="button">No</button>
+    </a>
+
+</form>
+</body>
+</html>
