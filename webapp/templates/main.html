@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 {% for post in posts %}
 <div class="main">
@@ -8,8 +8,8 @@
         {{post.email}}
 
         <div class="icons">
-            <a href="{% url 'edit_post' post.pk %}"><img class="edit-icon" src="icons/edit.png" /></a>
-            <a href="{% url 'delete_post' post.pk %}"><img class="delete-icon" src="icons/delete.png" /></a>
+            <a href="{% url 'edit_post' post.pk %}"><img class="edit-icon" src="{% static 'icons/edit.png' %}" /></a>
+            <a href="{% url 'delete_post' post.pk %}"><img class="delete-icon" src="{% static 'icons/delete.png' %}"/></a>
         </div>
 
     </div>
