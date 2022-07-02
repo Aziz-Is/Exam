@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    .main{
+        margin-bottom: 20px;
+        width: 400px;
+        height: 300px;
+        border-style: solid;
+        border-radius: 15px;
+    }
+
+    .author{
+        margin: 10px 10px;
+        border-bottom: solid;
+    }
+
+    .post{
+        margin: 10px 10px;
+    }
+
+    .icons {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .delete-icon,
+    .edit-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    </style>
+
+
+
+</head>
+<body>
+{% for post in posts %}
+<div class="main">
+    <div class="author">
+        {{post.author}}
+        {{post.email}}
+
+        <div class="icons">
+            <img class="edit-icon" src="./icons/edit.png" />
+            <img class="delete-icon" src="./icons/delete.png" />
+        </div>
+
+    </div>
+    <div class="post">
+        {{post.text}}
+    </div>
+</div>
+{% endfor %}
+</body>
+</html>
