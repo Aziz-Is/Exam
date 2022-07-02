@@ -47,7 +47,7 @@
         {{post.email}}
 
         <div class="icons">
-            <img class="edit-icon" src="./icons/edit.png" />
+            <a href="{% url 'edit_post' post.pk %}"><img class="edit-icon" src="./icons/edit.png" /></a>
             <img class="delete-icon" src="./icons/delete.png" />
         </div>
 
